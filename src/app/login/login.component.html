@@ -1,4 +1,5 @@
 <div class="login-container">
+  <h2>Users</h2>
   <ul>
     <li *ngFor="let item of users">{{item}}</li>
   </ul>
@@ -27,6 +28,7 @@
       />
     </div>
     <button type="submit" (click) = "onButtonClick()">Login</button>
+    <br>
     <a routerLink="/signup">Signup Now!</a>
     <app-displaydata [username] = "username" [password] = "password" (newUserEvent) = "addUser($event)" ></app-displaydata>
   </form>
