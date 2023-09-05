@@ -1,4 +1,8 @@
 <div class="login-container">
+  <ul>
+    <li *ngFor="let item of users">{{item}}</li>
+  </ul>
+  
   <h2>Login</h2>
   <form>
     <div class="form-group">
@@ -9,6 +13,7 @@
         name="username"
         [(ngModel)]="username"
         required
+        
       />
     </div>
     <div class="form-group">
@@ -21,6 +26,8 @@
         required
       />
     </div>
-    <button type="submit" (click)="onButtonClick()">Login</button>
+    <button type="submit" (click) = "onButtonClick()">Login</button>
+    <a routerLink="/signup">Signup Now!</a>
+    <app-displaydata [username] = "username" [password] = "password" (newUserEvent) = "addUser($event)" ></app-displaydata>
   </form>
 </div>
