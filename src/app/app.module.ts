@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { DisplaydataComponent } from './displaydata/displaydata.component';
+import { HomedisplayComponent } from './homedisplay/homedisplay.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DisplaydataComponent } from './displaydata/displaydata.component';
     LoginComponent,
     SignupComponent,
     HomeComponent,
-    DisplaydataComponent
+    DisplaydataComponent,
+    HomedisplayComponent
   ],
   imports: [
     BrowserModule,
