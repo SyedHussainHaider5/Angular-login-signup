@@ -12,6 +12,7 @@ import { HomedisplayComponent } from './homedisplay/homedisplay.component';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './state/counter.reducer';
 import { CounterComponent } from './counter/counter.component';
+import { TodolistComponent } from './todolist/todolist.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CounterComponent } from './counter/counter.component';
     HomeComponent,
     DisplaydataComponent,
     HomedisplayComponent,
-    CounterComponent
+    CounterComponent,
+    TodolistComponent
   ],
   imports: [
     BrowserModule,
