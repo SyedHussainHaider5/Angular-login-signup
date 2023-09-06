@@ -9,6 +9,9 @@ import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { DisplaydataComponent } from './displaydata/displaydata.component';
 import { HomedisplayComponent } from './homedisplay/homedisplay.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './state/counter.reducer';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,14 @@ import { HomedisplayComponent } from './homedisplay/homedisplay.component';
     SignupComponent,
     HomeComponent,
     DisplaydataComponent,
-    HomedisplayComponent
+    HomedisplayComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({count: counterReducer}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
